@@ -1,0 +1,27 @@
+
+spring:
+  datasource:
+    name: test  #数据库名
+    url: jdbc:mysql://localhost:3306/test #url
+    username: root  #用户名
+    password: 123456  #密码
+    driver-class-name: com.mysql.jdbc.Driver  #数据库链接驱动
+devtools:
+  restart:
+    enabled: true  #设置开启热部署
+    additional-paths: src/main/java #重启目录
+    exclude: WEB-INF/**
+  livereload:
+    enabled: false
+thymeleaf:
+    cache: false
+
+redis:
+  server:
+    host: localhost
+    port: 6379
+    # 连接超时时间
+    timeout: 10000
+    maxIdle: 50
+    maxWaitMillis: 500
+    maxTotal: 500
