@@ -15,6 +15,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 〈一句话功能简述〉<br> 
  * 〈〉
@@ -34,7 +37,15 @@ public class indexController {
 
     @RequestMapping("/test")
     public  String test(Model model){
-        model.addAttribute("msg","aa");
+        model.addAttribute("msg","<h2>bb</h2>");
+
+
+        model.addAttribute("msg2","<h2>cc</h2>");
+        List<String> list = new ArrayList<>();
+        list.add("user1");
+        list.add("user2");
+        list.add("user3");
+        model.addAttribute("users",list);
         return "mySpringbootHtml";
     }
 }
